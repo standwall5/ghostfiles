@@ -7,20 +7,22 @@
         <title>Unsolved Mysteries</title>
         <link rel="stylesheet" href="style1.css">
         <link rel="shortcut icon" href="Icon.png" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
+        <div class="disclaimer" id="disclaimer"><p>This website is a fan-made project and is not affiliated with Buzzfeed, Watcher Entertainment or Ghost Files. <span>All trademarks, media, and copyrights belong to their respective owners.</span></p><span class="btnDisclaimer" onclick="closeDisclaimer()">&#10006;</span></div>
         <nav>
             <ul class="sidebar">
                 <li onclick="hideMenu()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                 <li><a href="#">Channel</a></li>
-                <li><a href="#">YouTube</a></li>
+                <li><a href="#">Playlist</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Website</a></li>
             </ul>
             <ul>
                 <li><a href="#"><img class="icon" class="invert" src="Icon.png" width="80rem"></a></li>
                 <li class="hideOnMobile"><a href="#">Channel</a></li>
-                <li class="hideOnMobile"><a href="#">YouTube</a></li>
+                <li class="hideOnMobile"><a href="#">Playlist</a></li>
                 <li class="hideOnMobile"><a href="#">About</a></li>
                 <li class="hideOnMobile"><a href="#">Website</a></li>
                 <li onclick="showMenu()" class="menu-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
@@ -41,7 +43,7 @@
         <div class="content flex">
                 <div class="descGhost">
                     <img class="icon2 invert" src="Icon.png">
-                    <p style="margin-right: auto;">Ghost Files/Unsolved was a series hosted and created by Ryan Bergara and Shane Madej.<br>
+                    <p style="">Ghost Files/Unsolved was a series hosted and created by Ryan Bergara and Shane Madej.<br>
                         <span>They covered mysteries, the supernatural, crimes, disappearances, which were never given a clear conclusion.
                         Well-beloved by many because of its humorous yet serious tone and thoroughly researched content.</span>
                     </p>
@@ -51,7 +53,7 @@
         <!-- Footer -->
 
         <footer>
-            <p>John Patrick Salen</p>
+            <p><a href="https://johnpatricksalen.me" alt="my link" class="footerName" target="_blank">John Patrick Salen</a></p>
             <br>
             <div class="socials">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="512" height="512">
@@ -81,6 +83,7 @@
             <p>Web Development</p>
         </footer>
 
+        <script src="script.js"></script>
         <script>
             // query selector for classes
             var menu = document.querySelector(".sidebar")

@@ -8,6 +8,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -24,11 +25,48 @@ body {
     overflow-x: hidden;
 }
 
-nav {
+.disclaimer {
     position: fixed;
     top: 0;
+    background-color: #41d154;
+    z-index: 99;
+    padding: 0.5rem;
     width: 100%;
-    z-index: 998;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.btnDisclaimer {
+    position: absolute;
+    right: 1.5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btnDisclaimer:hover {
+    color: grey;
+}
+
+.disclaimer p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.disclaimer p span {
+    font-size: .8rem;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 98;
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.863); */
     /* box-shadow: 0 0 20px rgba(255, 255, 255, .2); */
 }
@@ -48,8 +86,9 @@ nav ul {
 }
 
 nav li {
-    height: 10rem;
+    height: 5rem;
     display: flex;
+    padding: 3rem 0;
 }
 
 nav a {
@@ -194,26 +233,24 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10rem;
 }
 
 .descGhost img {
     width: 18rem;
+    filter: invert();
+    margin-left: 15rem;
 }
 
 .descGhost p {
     font-size: 2rem;
-    padding-right: 8rem;
+    /* padding-right: 8rem; */
     line-height: 4rem;
+    margin-right: 10rem;
 }
 
 .descGhost p span {
     font-size: 1.7rem;
-}
-
-.icon2 {
-    margin-right: auto; 
-    padding: 0 20rem;
-    filter: invert();
 }
 
 footer {
@@ -223,9 +260,19 @@ footer {
     justify-content: center;
     text-align: center;
     background-color: white;
-    padding: 2rem 0;
+    padding: 5rem 0;
     width: 100%;
     height: 8rem;
+}
+
+.footerName {
+    text-decoration: none; 
+    color: black;
+    transition: .2s;
+}
+
+.footerName:hover {
+    color: grey;
 }
 
 .socials svg {
