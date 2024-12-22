@@ -26,8 +26,12 @@ $(window).scroll(function(e) {
 });
 
 
-// Close disclaimer
+// Close disclaimer and remove padding-top for body when closed
 function closeDisclaimer() {
     document.getElementById('disclaimer').style.display = 'none';
     document.querySelector('nav').style.top = '0';
+    $('body').css('padding-top', '0px');
+    $('.ghostVid').css('padding-top', '0px');
 }
+
+document.body.scrollTop = document.documentElement.scrollTop = 0;

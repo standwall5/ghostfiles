@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatib1e" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unsolved Mysteries</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="res/images/iconInverted.png" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#nav-placeholder").load("nav.html");
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+    </head>
+<body>
+    <div class="disclaimer" id="disclaimer"><p>This website is a fan-made project and is not affiliated with Buzzfeed, Watcher Entertainment or Ghost Files. <span>All trademarks, media, and copyrights belong to their respective owners.</span></p><span class="btnDisclaimer" onclick="closeDisclaimer()">&#10006;</span></div>
+
+    <div id="nav-placeholder"></div>
+    <div class="wrapper"></div>
+
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>

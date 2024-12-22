@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 
+@font-face {
+    font-family: "Microgramma D Extended";
+    src: url('res/fonts/Microgramma\ D\ Extended\ Bold.otf');
+}
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    padding-top: 50px;
     min-height: 100vh;
     /* background-image: url(shaneryan2.png); */
     background-color: #1d191e;
@@ -20,11 +26,48 @@ body {
     overflow-x: hidden;
 }
 
-nav {
+.disclaimer {
     position: fixed;
     top: 0;
+    background-color: #41d154;
+    z-index: 99;
+    padding: 0.5rem;
     width: 100%;
-    z-index: 998;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.btnDisclaimer {
+    position: absolute;
+    right: 1.5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btnDisclaimer:hover {
+    color: grey;
+}
+
+.disclaimer p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.disclaimer p span {
+    font-size: .8rem;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 98;
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.863); */
     /* box-shadow: 0 0 20px rgba(255, 255, 255, .2); */
 }
@@ -44,8 +87,9 @@ nav ul {
 }
 
 nav li {
-    height: 10rem;
+    height: 5rem;
     display: flex;
+    padding: 3rem 0;
 }
 
 nav a {
@@ -77,6 +121,61 @@ svg:hover {
     filter: drop-shadow(0 0 5px #fff);
 }
 
+.wrapper
+
+.home {
+    position: relative;
+    width: fit-content;
+}
+
+.ghostVid {
+    padding-top: 60px;
+    position: absolute;
+    top: 52%; /* adjust to position the iframe */
+    left: 78.5%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* ensures the iframe is above the image */
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+.ghostVidMobile {
+    position: absolute;
+    margin: auto;
+    z-index: 1; /* ensures the iframe is above the image */
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.videoOverlay {
+    transition: .5s;
+    border-radius: 2rem;
+}
+
+.videoOverlay:hover {
+    transition: .5s;
+    border: .2rem solid white;
+    border-radius: 2rem;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, .5));
+}
+
+h1{
+    transition: .2s;
+    clip-path: inset(1px 1px -15px 1px);
+    font-family: "Microgramma D Extended";
+    border-bottom: 0px solid white;
+}
+
+.videoOverlay:hover ~ h1{
+    color: #e6ffd4;
+    transition: .5s;
+    text-shadow: 0 0 20px #8dd894;
+    border-bottom: .5rem solid #e6ffd4;
+    box-shadow: 0 10px 5px -2px;
+    box-shadow: 0 0 15px #8dd894; /* note 0 offset values */
+    clip-path: inset(1px 1px -15px 1px);
+}
 
 .sidebar {
     position: fixed;
@@ -117,8 +216,7 @@ svg:hover {
 }
 
 .icon:hover {
-    transition: .2s;
-    filter: invert() drop-shadow(0 0 10px rgba(255, 255, 255, .2));
+    filter: invert() drop-shadow(0 0 15px rgba(255, 255, 255, .2));
 }
 
 .content {
@@ -138,26 +236,24 @@ svg:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10rem;
 }
 
 .descGhost img {
     width: 18rem;
+    filter: invert();
+    margin-left: 15rem;
 }
 
 .descGhost p {
     font-size: 2rem;
-    padding-right: 8rem;
+    /* padding-right: 8rem; */
     line-height: 4rem;
+    margin-right: 10rem;
 }
 
 .descGhost p span {
     font-size: 1.7rem;
-}
-
-.icon2 {
-    margin-right: auto; 
-    padding: 0 20rem;
-    filter: invert();
 }
 
 footer {
@@ -167,22 +263,34 @@ footer {
     justify-content: center;
     text-align: center;
     background-color: white;
-    padding: 2rem 0;
+    padding: 5.5rem 0;
     width: 100%;
     height: 8rem;
+    left: 0;
+    bottom: 0;
 }
 
-.socials svg {
-    height: auto;
-    width: 1.5rem;
-    padding: 0 5px;
+.footerName {
+    text-decoration: none; 
+    color: black;
+    transition: .2s;
 }
 
-.socials svg:hover {
+.footerName:hover {
+    color: grey;
+}
+
+.socials img {
     height: auto;
-    width: 2rem;
+    width: 3rem;
     padding: 0 5px;
-    filter: invert(50%)
+    transition: .5s;
+}
+
+.socials img:hover {
+    height: auto;
+    padding: 0 5px;
+    filter: invert(50%);
 }
 
 @media(max-width: 1280px) {
